@@ -2,4 +2,4 @@
 
 [BAEKJOON](https://www.acmicpc.net/)
 
-[코딩테스트 문제 추천 링크](https://rladuddms.tistory.com/99)
+[백준 문제 추천 / 공부 순서](https://rladuddms.tistory.com/99)
