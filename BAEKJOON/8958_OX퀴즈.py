@@ -1,5 +1,6 @@
 # 8958번 OX퀴즈
-# https://www.acmicpc.net/problem/8958
+## https://www.acmicpc.net/problem/8958
+### try 3 times
 
 n = int(input())
 
