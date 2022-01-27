@@ -14,6 +14,6 @@ for _ in range(n):
       score += 1
       sum += score
     else:
-      scroe = 0
+      score = 0
       
   print(sum)
