@@ -1,14 +1,10 @@
-import sys
+# 10808번 알파벳개수
+## https://www.acmicpc.net/problem/10808
 
-input = sys.stdin.readline
+n = input()
+lst = [0]*26
 
-string = list(input().rstrip())
-
-alpha_count = {}
-for i in range(ord('z') - ord('a') + 1):
-    alpha_count[chr(ord('a') + i)] = 0
-
-for alphabet in string:
-    alpha_count[alphabet] += 1
-
-print(*list(alpha_count.values()))
+for i in range(n):
+    lst[ord(i)-97] += 1
+for i in lst:
+    print(i, end=' ')
