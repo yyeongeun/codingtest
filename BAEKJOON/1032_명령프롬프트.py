@@ -1,3 +1,6 @@
+#1032번 명령프롬프트
+#https://www.acmicpc.net/problem/1032
+
 n=int(input())
 a=list(input())
 a_len=len(a)
