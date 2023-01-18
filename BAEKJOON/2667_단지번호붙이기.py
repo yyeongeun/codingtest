@@ -7,7 +7,7 @@ N = int(input())
 
 graph = []
 for i in range(N):
-  graph.append(list(map(int,input().split())))
+  graph.append(list(map(int,input().rstrip())))
 count = 0
 result = []
 
