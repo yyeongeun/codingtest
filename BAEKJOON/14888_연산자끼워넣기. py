@@ -1,0 +1,31 @@
+#14888번
+#https://www.acmicpc.net/problem/14888
+
+N = int(input())
+num = list(map(int,input().split()))
+op = list(map(int,input().split()))
+
+maximum = -1e9
+minimum = 1e9
+
+def back(depth,total,plus,minus,multiple,divide):
+    global maximum, minimum
+    
+    if depth == N:
+        maximum = max(maximum,total)
+        minimum = min(minimum,total)
+        return
+    
+    if plus:
+        back(depth+1,total+num[depth],plus-1,minus,multiple,divide)
+    if minus:
+        back(depth+1,total-num[depth],plus,minus-1,multiple,divide)
+    if multiple:
+        back(depth+1,total*num[depth],plus,minus,multiple-1,divide)
+    if divide:
+        back(depth+1,int(total/num[depth]),plus,minus,multiple,divide-1)
+
+back(1,num[0],op[0],op[1],op[2],op[3])
+print(maximum)
+print(minimum)
+
