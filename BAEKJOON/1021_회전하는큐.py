@@ -3,8 +3,8 @@
 
 import sys
 from collections import deque
+input = sys.stdin.readline
 
-input = sys.stdin.readlilne()
 n, m = map(int,input().split())#큐의 크기 n , 뽑아내려고하는 수 m
 loc = list(map(int,input().split()))
 q = deque([ _ for _ in range(1,n+1)])
