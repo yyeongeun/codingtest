@@ -4,18 +4,18 @@
 
 from collections import deque
 
-def bfs(start,visitied,graph):
+def bfs(start,visited,graph):
     queue = deque([start])
     result = 1 #연결된 노드수
-    visitied[start] = True #시작 노드 방문 처리
+    visited[start] = True #시작 노드 방문 처리
     while queue: #bfs 수행
         now = queue.popleft()
         
         for i in graph[now]: #now 노드와 연결된 노드에 대해서
-            if visitied[i] == False: #방문하지 않았을 경우만
+            if visited[i] == False: #방문하지 않았을 경우만
                 result += 1
                 queue.append(i)
-                visitied[i] = True
+                visited[i] = True
                 
     return result
         
@@ -29,10 +29,10 @@ def solution(n, wires):
         graph[v2].append(v1)
             
     for start,not_visit in wires:
-        visitied = [False]*(n+1)
-        visitied[not_visit] = True
+        visited = [False]*(n+1)
+        visited[not_visit] = True
         # 해당 노드 끊었을 때, 한쪽 영역의 노드 수 result 구하기
-        result = bfs(start,visitied,graph)
+        result = bfs(start,visited,graph)
         # 기존 result와 현재 result 차이 비교해서 최소값 구하기
         if abs(result - (n-result)) < answer:
             answer = abs(result - (n-result))
