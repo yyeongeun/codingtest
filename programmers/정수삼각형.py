@@ -1,0 +1,14 @@
+# 프로그래머스 lv 3 정수 삼각형
+# https://school.programmers.co.kr/learn/courses/30/lessons/43105
+
+def solution(triangle):
+    for i in range(1,len(triangle)): # 행
+        for j in range(i+1): # 열
+            if j == 0: # 가장 왼쪽
+                triangle[i][j] = triangle[i][j] + triangle[i-1][j] #오른쪽 값만 더하기
+            elif j == i: # 가장 오른쪽
+                triangle[i][j] = triangle[i][j] + triangle[i-1][j-1] #왼쪽 값만 더하기
+            else:
+                triangle[i][j] = triangle[i][j] + max(triangle[i-1][j],triangle[i-1][j-1]) # 둘중 큰 값 더하기
+
+    return max(triangle[-1])
