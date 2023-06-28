@@ -1,0 +1,9 @@
+-- 프로그래머스 LV 3 오랜 기간 보호한 동물(2)
+-- https://school.programmers.co.kr/learn/courses/30/lessons/59411
+
+SELECT A.ANIMAL_ID, A.NAME
+FROM ANIMAL_INS AS A
+JOIN ANIMAL_OUTS AS B
+WHERE A.ANIMAL_ID = B.ANIMAL_ID
+ORDER BY DATEDIFF(B.DATETIME,A.DATETIME) DESC
+LIMIT 2;
