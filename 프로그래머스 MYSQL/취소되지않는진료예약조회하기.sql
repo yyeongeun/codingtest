@@ -1,0 +1,14 @@
+-- 프로그래머스 lv 3 취소되지 않은 진료 예약 조회하기
+-- https://school.programmers.co.kr/learn/courses/30/lessons/132204
+
+SELECT A.APNT_NO, PT_NAME, A.PT_NO, A.MCDP_CD, DR_NAME, APNT_YMD
+FROM APPOINTMENT AS A
+INNER JOIN PATIENT AS P
+ON A.PT_NO = P.PT_NO
+INNER JOIN DOCTOR AS D
+ON A.MDDR_ID = D.DR_ID
+
+WHERE DATE_FORMAT(A.APNT_YMD,"%Y-%m-%d") LIKE "2022-04-13%"
+AND A.MCDP_CD = "CS"
+AND A.APNT_CNCL_YN = "N"
+ORDER BY A.APNT_YMD;
