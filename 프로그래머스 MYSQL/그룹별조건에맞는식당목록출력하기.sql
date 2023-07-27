@@ -1,4 +1,4 @@
--- 프로그래머스 lv 4 그룹별 조건에 맞는 식당 목록 출력하기
+-- 프로그래머스 lv4 그룹별 조건에 맞는 식당 목록 출력하기
 -- https://school.programmers.co.kr/learn/courses/30/lessons/131124
 
 SELECT M.MEMBER_NAME, R.REVIEW_TEXT, DATE_FORMAT(R.REVIEW_DATE, "%Y-%m-%d") REVIEW_DATE
