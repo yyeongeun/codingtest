@@ -1,3 +1,6 @@
+# https://www.acmicpc.net/problem/1816
+# 백준 브론즈 1 1816번 암호 키
+
 N = int(input())
 for _ in range(N):
     S = int(input())
