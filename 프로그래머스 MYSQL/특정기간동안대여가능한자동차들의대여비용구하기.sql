@@ -1,5 +1,5 @@
--- 프로그래머스 lv 4
--- 특정 기간동안 대여 가능한 자동차들의 대여비용 구하기
+-- 프로그래머스 lv 4 특정 기간동안 대여 가능한 자동차들의 대여비용 구하기
+-- https://school.programmers.co.kr/learn/courses/30/lessons/157339?language=mysql
 
 SELECT C.CAR_ID, C.CAR_TYPE, ROUND(DAILY_FEE*30*(100-DISCOUNT_RATE)/100) AS FEE
 FROM CAR_RENTAL_COMPANY_CAR AS C
