@@ -1,4 +1,4 @@
-# 백준 14253번 공약수열
+# 백준 14252번 공약수열
 # https://www.acmicpc.net/problem/14252
 
 import sys
