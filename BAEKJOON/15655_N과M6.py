@@ -1,4 +1,4 @@
-# 백준 N과 M(6)
+# 백준 15655번 N과 M(6)
 # https://www.acmicpc.net/problem/15655
 
 def recur(number):
